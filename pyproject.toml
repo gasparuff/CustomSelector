@@ -1,14 +1,14 @@
 [project]
-name = "ComfyUI Custom Selector"
+name = "comfyui-customselector"
 description = ""
 version = "1.0.0"
 license = "LICENSE"
 
 [project.urls]
-Repository = "https://github.com/gasparuff/CustomSelector.git"
+Repository = "https://github.com/gasparuff/CustomSelector"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
 PublisherId = "pixible"
-DisplayName = "Custom Selector"
+DisplayName = "comfyui-customselector"
 Icon = ""
