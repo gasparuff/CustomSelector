@@ -26,6 +26,7 @@ class CustomSelector:
                 "denoise_wide": ("FLOAT", {"default": 0.20, "step": 0.01}),
 
                 "clear_string": ("BOOLEAN", {"default": False}),
+                "url_prefix": ("STRING", {"default": ""}),
             }
         }
 
@@ -60,7 +61,8 @@ class CustomSelector:
         start_at_closeup, start_at_medium, start_at_wide,
         end_at_closeup, end_at_medium, end_at_wide, 
         denoise_closeup, denoise_medium, denoise_wide,
-        clear_string
+        clear_string,
+        url_prefix
     ):
         input_string = input_string.strip()
         lowered = input_string.lower()
@@ -110,7 +112,7 @@ class CustomSelector:
         for kw in keyword_list:
             if re.search(rf"\b{re.escape(kw)}\b", lowered):
                 matched_keyword = kw
-                image_url = f"https://qikbljxzzfgjkurwndun.supabase.co/storage/v1/object/public/generated-images/resources/faces/{kw}.jpg"
+                image_url = f"{url_prefix.rstrip('/')}/{kw}.jpg"
                 break
 
         if clear_string:

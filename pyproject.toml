@@ -1,8 +1,8 @@
 [project]
 name = "comfyui-customselector"
-description = ""
-version = "1.0.0"
-license = "LICENSE"
+description = "Helps deciding different settings depending on the input string"
+version = "1.0.1"
+license = { file = "LICENSE" }
 
 [project.urls]
 Repository = "https://github.com/gasparuff/CustomSelector"
